@@ -1,0 +1,154 @@
+body{
+    margin: 0px;
+    font-family: 'Muli', sans-serif;
+}
+.header{
+    background-color: #21c08b;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__img{
+    width: 200px;
+    margin-left: 25px;
+}
+.login{
+    background: linear-gradient(#21c08b , #2e279d) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px 0px;
+    min-height: cal(100vh - 200px); /*Los vh es la medida que el usuario ve en la pantalla*/
+}
+.login__container{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    border-radius: 40px;
+    color: white;
+    padding: 60px 50px;
+    min-height: 530px;
+    width: 290px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    box-shadow: 0px 0px 22px 7px rgba(0,0,0,0.3);
+}
+.login__container--form{
+    display: flex;
+    flex-direction: column;
+}
+.login__container--form label{
+    font-size: 14px;
+}
+.login__container--remember{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.login__container--remember a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+.login__container--remember a:hover{
+    text-decoration: underline;
+}
+.login__container--social-media > div{ /*Con poner > indico que quiero que coja todos los div que hay en ese contenedor*/
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.login__container--social-media > div > img{
+    width: 30px;
+    margin-right: 10px;
+}
+.login__container--register{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login__container--register a{
+    padding-left: 5px;
+    font-size: 16px;
+    font-weight: bold; /*Para poner negrita*/
+    color: white;
+    text-decoration: none;
+}
+.login__container--register a:hover{
+    text-decoration: underline;
+}
+.input{
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid white;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    outline: none;
+    padding: 0px 15px;
+    margin-bottom: 20px;
+    color:white;
+    height: 45px;
+}
+::placeholder{
+    color: white;
+}
+.button{
+    background-color: rgba(0,0,0,0.2);
+    border: 1px solid white;
+    border-radius: 30px;
+    height: 50px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px; /*Para separar el espacio entre letras*/
+    margin: 10px 0px;
+    outline: none;
+}
+
+.footer{
+    margin-top: auto; /*El padre debe tener display flex y con este margin-top: auto siempre se va abajo*/
+    background-color: #2e279d;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footer > a{
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    font-family: 'Muli', sans-serif;
+    padding-left: 30px;
+    text-decoration: none;
+}
+.footer > a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px){
+    .login__container{
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0px;
+        width: 80%;
+    }
+
+    .footer{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

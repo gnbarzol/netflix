@@ -1,0 +1,112 @@
+$blanco: white;
+
+body{
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+}
+
+/** HEADER **/
+.header{
+    background-color: #21c08b;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*box-shadow: 2px 3px 15px 4px rgba(255, 255, 255, 0.3); comienza en x, comienza en y, degradado, difumicacion, color */
+}
+.header__img{
+    width: 200px;
+    margin-left: 25px;
+}
+.header__menu{
+    margin-right: 30px;
+}
+.header__menu ul{
+    display: none;
+    list-style: none; /*Para sacar los puntos del item*/
+    position: absolute;
+    padding: 0px;
+    text-align: right;
+    width: 100px;
+    margin: 0px 0px 0px -14px;
+}
+.header__menu:hover ul, ul:hover{
+    display: block;
+}
+.header__menu li{
+    margin: 10px 0px;
+}
+.header__menu li a{
+    color: #fff;
+    text-decoration: none;
+}
+.header__menu li a:hover{
+    text-decoration: underline;
+}
+.header__menu--profile{
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+.header__menu--profile img{
+    margin-right: 8px;
+    width: 40px;
+}
+.header__menu--profile p{
+    color: #fff;
+    margin: 0;
+}
+
+.main{
+    background: linear-gradient(#21c08b, #2e279d);
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $blanco;
+}
+.main__container p:last-child{
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.main__container--pulso{
+    animation: pulso 2s infinite;
+    margin-bottom: 5px;
+    font-size: 50px;
+}
+
+@keyframes pulso{
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+}
+
+
+.footer{
+    background-color: #2e279d; /*342dc2*/
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footer > a{
+    cursor: pointer;
+    color: $blanco;
+    font-size: 14px;
+    font-family: 'Muli', sans-serif;
+    padding-left: 30px;
+    text-decoration: none;
+}
+.footer > a:hover{
+    text-decoration: underline;
+}
